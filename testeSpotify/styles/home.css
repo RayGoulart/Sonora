@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1c0620, #2e0933, #6b146a, #4a0c66);
+    color: white;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(48, 0, 85, 0.8);
+}
+
+#logoSonora img {
+    width: 60px; /* Tamanho ajustado para a logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaço entre os itens do menu */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+.playlist {
+    background-color: rgba(48, 0, 85, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.music-list {
+    display: flex;
+    flex-direction: column; /* Alinha as músicas em coluna */
+    gap: 15px; /* Espaço entre as músicas */
+}
+
+.music-item {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.album-cover {
+    width: 60px; /* Tamanho da capa do álbum */
+    height: 60px; /* Tamanho da capa do álbum */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-right: 15px; /* Espaço entre a imagem e o texto */
+}
+
+.music-info {
+    display: flex;
+    flex-direction: column; /* Alinha o título e artista em coluna */
+}
+
+.music-title {
+    margin: 0; /* Remove margem */
+    font-size: 16px; /* Tamanho do título da música */
+}
+
+.music-artist {
+    margin: 0; /* Remove margem */
+    font-size: 14px; /* Tamanho do artista */
+    color: #aaa; /* Cor mais clara para o artista */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(48, 0, 85, 0.8);
+    position: relative; /* Adiciona contexto para o posicionamento */
+    bottom: 0; /* Fixa o footer ao fundo */
+    width: 100%; /* Largura total */
+}
