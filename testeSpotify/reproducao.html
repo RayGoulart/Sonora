@@ -1,32 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Reprodução - Sonora</title>
-    <link rel="stylesheet" href="./styles/reproducao.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Music Player - Spotify Style</title>
+  <link rel="stylesheet" href="./styles/reproducao.css">
 </head>
 <body>
-    <div class="container">
-        <div id="logoSonora">
-            <img src="sonora_logo.png" alt="Sonora Logo">
-        </div>
-        <div class="music-info">
-            <img src="capa_album.jpg" alt="Capa do Álbum" class="album-cover">
-            <h1 id="music-title">Tin Soldiers</h1>
-            <h2 id="music-artist">Ed Harrison</h2>
-        </div>
-        <div class="controls">
-            <button class="control-button">⏮️</button>
-            <button class="control-button play-button">⏯️</button>
-            <button class="control-button">⏭️</button>
-        </div>
-        <input type="range" class="progress-bar" value="50" />
-        <div class="time-info">
-            <span class="current-time">3:03</span> / 
-            <span class="total-time">8:13</span>
-        </div>
-        <p class="devices">Dispositivos disponíveis</p>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h1>Sonora</h1>
+      <ul>
+        <li>Home</li>
+        <li>Buscar</li>
+        <li>Biblioteca</li>
+      </ul>
     </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <!-- Album Cover and Song Info -->
+      <div class="album-section">
+        <img src="https://placehold.co/300x300" alt="Album Cover" class="album-cover">
+        <div class="song-info">
+          <h2>Blinding Lights</h2>
+          <p>The Weeknd</p>
+        </div>
+      </div>
+
+      <!-- Controls and Playback -->
+      <div class="controls">
+        <button class="control-btn">🔀</button>
+        <button class="control-btn">⏮️</button>
+        <button class="play-btn">⏯️</button>
+        <button class="control-btn">⏭️</button>
+        <button class="control-btn">🔁</button>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-section">
+        <span>0:45</span>
+        <input type="range" class="progress-bar" min="0" max="100" value="45">
+        <span>3:20</span>
+      </div>
+
+      <!-- Volume and Additional Controls -->
+      <div class="extra-controls">
+        <div class="volume-control">
+          <button class="control-btn">🔊</button>
+          <input type="range" class="volume-bar" min="0" max="100" value="80">
+        </div>
+        <div class="playlist-button">
+          <button class="control-btn">💾 Save to Playlist</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

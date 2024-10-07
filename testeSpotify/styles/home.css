@@ -1,88 +1,108 @@
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #1c0620, #2e0933, #6b146a, #4a0c66);
-    color: white;
+/* Global styles */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: rgba(48, 0, 85, 0.8);
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#logoSonora img {
-    width: 60px; /* Tamanho ajustado para a logo */
+.menu-button, .search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-nav ul {
-    list-style: none;
+.search-wrapper {
+    flex: 1;
+    margin: 0 20px;
     display: flex;
-    gap: 20px; /* Espaço entre os itens do menu */
+    justify-content: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+.search-input {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 16px;
 }
 
-main {
-    padding: 20px;
+.search-input::placeholder {
+    color: #888;
 }
 
-.playlist {
-    background-color: rgba(48, 0, 85, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+/* Sections */
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #333;
 }
 
-h1 {
+/* Artist cards */
+.artists-list {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
     margin-bottom: 20px;
 }
 
-.music-list {
-    display: flex;
-    flex-direction: column; /* Alinha as músicas em coluna */
-    gap: 15px; /* Espaço entre as músicas */
-}
-
-.music-item {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente */
-}
-
-.album-cover {
-    width: 60px; /* Tamanho da capa do álbum */
-    height: 60px; /* Tamanho da capa do álbum */
-    border-radius: 10px; /* Bordas arredondadas */
-    margin-right: 15px; /* Espaço entre a imagem e o texto */
-}
-
-.music-info {
-    display: flex;
-    flex-direction: column; /* Alinha o título e artista em coluna */
-}
-
-.music-title {
-    margin: 0; /* Remove margem */
-    font-size: 16px; /* Tamanho do título da música */
-}
-
-.music-artist {
-    margin: 0; /* Remove margem */
-    font-size: 14px; /* Tamanho do artista */
-    color: #aaa; /* Cor mais clara para o artista */
-}
-
-footer {
+.artist-card {
+    min-width: 150px;
+    margin-right: 10px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
     text-align: center;
-    padding: 20px;
-    background-color: rgba(48, 0, 85, 0.8);
-    position: relative; /* Adiciona contexto para o posicionamento */
-    bottom: 0; /* Fixa o footer ao fundo */
-    width: 100%; /* Largura total */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.artist-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.artist-name {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
 }
