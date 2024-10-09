@@ -1,65 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Music App</title>
+    <title>Sonora - Home</title>
     <link rel="stylesheet" href="./styles/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <div class="navbar">
-            <button class="menu-button">
-                <img src="https://openui.fly.dev/openui/24x24.svg?text=☰" alt="Menu" />
+    <header>
+        <img src="./imagens/unnamed.png" alt="Logo Sonora" class="logo">
+        <div class="search-container">
+            <button class="search-icon-button">
+                <img src="./imagens/lupaCerta.png" alt="Lupa" class="search-icon">
             </button>
-            <div class="search-wrapper">
-                <input type="text" placeholder="Buscar" class="search-input" />
-            </div>
-            <button class="search-button">
-                <img src="https://openui.fly.dev/openui/24x24.svg?text=🔍" alt="Search" />
-            </button>
+            <input type="text" placeholder="Buscar músicas, artistas ou álbuns...">
+            <button class="search-button">Buscar</button>
         </div>
+        <img src="./imagens/iiicone.png" alt="Ícone de Perfil" class="profile-icon">
+    </header>
 
-        <h2 class="section-title">Descobrir</h2>
-        <div class="artists-list">
-            <div class="artist-card">
-                <img src="https://placehold.co/150x150" alt="Coldplay" />
-                <p class="artist-name">Coldplay</p>
+    <main>
+        <div id="containe_musica">
+            <div class="section-header">
+                <h1>recomendado para você</h1>
+                <h1 class="mostrar-tudo">mostrar tudo</h1>
             </div>
-            <div class="artist-card">
-                <img src="https://placehold.co/150x150" alt="Artist 2" />
-                <p class="artist-name">Artist 2</p>
-            </div>
-            <div class="artist-card">
-                <img src="https://placehold.co/150x150" alt="Artist 3" />
-                <p class="artist-name">Artist 3</p>
-            </div>
-            <div class="artist-card">
-                <img src="https://placehold.co/150x150" alt="Artist 4" />
-                <p class="artist-name">Artist 4</p>
-            </div>
-        </div>
+            <section class="music-grid" id="musicGrid">
+                <div class="carousel-container">
 
-        <h2 class="section-title">Novos lançamentos</h2>
-        <div class="artists-list">
-            <div class="artist-card">
-                <img src="https://placehold.co/150x150" alt="Beyoncé" />
-                <p class="artist-name">Beyoncé</p>
-            </div>
-            <div class="artist-card">
-                <img src="https://placehold.co/150x150" alt="Artist 5" />
-                <p class="artist-name">Artist 5</p>
-            </div>
-            <div class="artist-card">
-                <img src="https://placehold.co/150x150" alt="Artist 6" />
-                <p class="artist-name">Artist 6</p>
-            </div>
-            <div class="artist-card">
-                <img src="https://placehold.co/150x150" alt="Artist 7" />
-                <p class="artist-name">Artist 7</p>
-            </div>
-        </div>
-    </div>
+                    <div class="music-grid"> <!-- Removendo o id do segundo music-grid -->
+                        <div class="music-item">
+                            <img src="./imagens/coldplay.webp" alt="Música 1" class="music-image">
+                            <p class="music-title">ColdPlay- Yellow</p>
+                        </div>
+                        <div class="music-item">
+                            <img src="./imagens/me atraiu.jpg" alt="Música 2" class="music-image">
+                            <p class="music-title">Gabriela Rocha- Me atraiu</p>
+                        </div>
+                        <div class="music-item">
+                            <img src="./imagens/luiza sonza.jpg" alt="Música 3" class="music-image">
+                            <p class="music-title">Luísa Sonza- Melhor Sozinha</p>
+                        </div>
+                        <div class="music-item">
+                            <img src="./imagens/legiao urbana.jpg" alt="Música 4" class="music-image">
+                            <p class="music-title">Legião Urbana- Tempo Perdido</p>
+                        </div>
+                        <div class="music-item">
+                            <img src="./imagens/birdy.jpg" alt="Música 5" class="music-image">
+                            <p class="music-title">Birdy - People Help the People</p>
+                        </div>
+                        <div class="music-item">
+                            <img src="./imagens/billie.webp" alt="Música 6" class="music-image">
+                            <p class="music-title">Billie Eilish- Chihiro</p>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+    </main>
+
+
 </body>
+
 </html>

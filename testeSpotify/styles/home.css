@@ -1,108 +1,222 @@
-/* Global styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #4a0c66, #2e0933, #6b146a, #4a0c66);
+    color: white;
+    margin: 0;
 }
 
-/* Container */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Navbar */
-.navbar {
-    width: 100%;
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    background-color: #fff;
-    padding: 8px 16px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #181818;
 }
 
-.menu-button, .search-button {
-    background: none;
-    border: none;
+.logo {
+    width: 50px;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     cursor: pointer;
 }
 
-.search-wrapper {
-    flex: 1;
-    margin: 0 20px;
+.search-container {
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
-.search-input {
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #282828;
+    color: white;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #535353; /* Cor verde do Spotify */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #1aa34a; /* Verde mais claro ao passar o mouse */
+}
+
+main {
+    padding: 20px;
+    
+}
+
+#containe_musica {
+    background-color: rgba(48, 0, 85, 0.13);
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: 380px;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+h1{
+    height: 20px;
+    font-size: large;
+}
+
+
+
+
+
+.music-grid {
+    display: flex; /* Exibe os itens em linha */
+    
+}
+
+.music-item {
+    width: 220px; /* Largura do item */
+    margin: 10px; /* Espaço entre os itens */
+    text-align: center; /* Centraliza o texto */
+}
+
+.music-image {
     width: 100%;
-    padding: 8px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    background-color: #f1f1f1;
-    color: #333;
-    font-size: 16px;
+    height: 100%;
+    max-height: 200px;  /* Define uma altura máxima para que as imagens não fiquem muito grandes */
+    object-fit: contain;  /* Mantém a proporção da imagem e ajusta dentro do contêiner */
+    border-radius: 10px;
 }
 
-.search-input::placeholder {
-    color: #888;
+
+
+
+
+
+.music-item:hover {
+    transform: scale(1.05); /* Efeito de crescimento ao passar o mouse */
 }
 
-/* Sections */
-.section-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.music-image {
     width: 100%;
-    color: #333;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
-
-/* Artist cards */
-.artists-list {
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
     display: flex;
-    overflow-x: auto;
-    width: 100%;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe a altura total da janela */
+    height: 100vh; /* Ajusta a altura para ocupar toda a tela */
+    overflow-y: auto; /* Permite rolagem vertical */
+}
+
+main {
+    flex: 1; /* Faz o main expandir para ocupar o espaço restante */
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    margin-top: auto; /* Empurra o footer para o final da página */
+}
+
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
     margin-bottom: 20px;
 }
 
-.artist-card {
-    min-width: 150px;
-    margin-right: 10px;
-    background-color: #e0e0e0;
-    border-radius: 8px;
-    padding: 10px;
+.mostrar-tudo {
+    font-size: 16px;
+    font-weight: normal;
+    color: #1db954;
+    cursor: pointer;
+    border-bottom: 2px solid #1db954; /* Adiciona a linha */
+    padding-bottom: 2px; /* Dá um pequeno espaço entre o texto e a linha */
+}
+
+.mostrar-tudo:hover {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    border-bottom: 2px solid #1aa34a; /* Muda a cor da linha ao passar o mouse */
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-icon-button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px 10px 10px 40px; /* Espaço extra à esquerda para a lupa */
+    border-radius: 20px;
+    border: none;
+    background-color: #282828;
+    color: white;
+}
+
+.search-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #1db954;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #1aa34a;
+}
+
+
+
+ 
+
+main {
+    padding: 20px;
+    height: auto; /* Permite que o conteúdo do main expanda conforme necessário */
+    min-height: 100vh; /* Garante que o main ocupe no mínimo a altura total da tela */
+}
+
+footer {
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.artist-card img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.artist-name {
-    margin-top: 8px;
-    font-size: 1em;
-    color: #333;
-}
-
-.artist-card:hover {
-    transform: scale(1.05);
+    padding: 10px;
+    background-color: #222;
+    position: relative; /* Remove o "fixo" para permitir rolagem */
 }

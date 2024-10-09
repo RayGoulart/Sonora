@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/playlist.css"> <!-- Link para o CSS -->
+    <title>Adicionar Música</title>
+</head>
+<body>
+    <header>
+        <h1>Adicionar Música à Playlist</h1>
+        <nav>
+            <a href="add_song.html">Adicionar Música</a>
+            <a href="playback.html">Reprodução</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="add-song-form" class="add-song-form">
+            <input type="text" id="song-title" placeholder="Título da Música" required>
+            <input type="text" id="song-artist" placeholder="Artista" required>
+            <input type="text" id="song-id" placeholder="ID do Vídeo do YouTube" required>
+            <button type="submit">Adicionar Música</button>
+        </form>
+        
+        <h2>Músicas Adicionadas:</h2>
+        <ul id="song-list"></ul>
+    </main>
+
+    <script src="scripts/add_song.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>
