@@ -1,83 +1,77 @@
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #1c0620, #2e0933, #6b146a, #4a0c66);
-  color: white;
-  margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #1c0620, #2e0933, #6b146a, #4a0c66);
+    color: white;
+    margin: 0;
 }
 
 .container {
-  display: flex;
-  height: 100vh;
+    display: flex;
+    height: 100vh;
 }
 
 .sidebar {
-  background-color: rgba(48, 0, 85, 0.9);
-  padding: 20px;
-  width: 200px;
+    background-color: rgba(48, 0, 85, 0.9);
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
 }
 
 .sidebar h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .sidebar ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .sidebar ul li {
-  margin-bottom: 10px;
-  cursor: pointer;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .main-content {
-  flex-grow: 1;
-  padding: 20px;
+    flex-grow: 1;
+    padding: 20px;
 }
 
-.album-section {
-  text-align: center;
-  margin-bottom: 30px;
+h1 {
+    margin-bottom: 20px;
 }
 
-.album-cover {
-  width: 300px;
-  height: 300px;
-  border-radius: 10px;
+.playlist {
+    margin-top: 20px;
 }
 
-.song-info {
-  margin-top: 20px;
-}
-
-.controls, .progress-section, .extra-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.controls button, .volume-control button {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  margin: 0 10px;
+.music {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .play-btn {
-  font-size: 36px;
+    background: #1DB954; /* Cor do botão de play do Spotify */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.progress-section span {
-  margin: 0 10px;
-}
-
-.progress-bar {
-  width: 300px;
-}
-
-.volume-bar {
-  width: 100px;
+.play-btn:hover {
+    background: #1aa34a;
 }

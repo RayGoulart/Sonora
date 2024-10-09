@@ -1,42 +1,61 @@
-const addSongForm = document.getElementById('add-song-form');
-const songList = document.getElementById('song-list');
+const createPlaylistButton = document.getElementById('create-playlist');
+const addMusicButton = document.getElementById('add-music');
+const playlistsContainer = document.getElementById('playlists');
 
-// Carrega a playlist do localStorage ao iniciar a página
-document.addEventListener('DOMContentLoaded', loadPlaylist);
+let playlists = {};
 
-addSongForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-
-    const title = document.getElementById('song-title').value;
-    const artist = document.getElementById('song-artist').value;
-    const videoId = document.getElementById('song-id').value;
-
-    addSongToPlaylist(title, artist, videoId);
-    addSongForm.reset(); // Limpa o formulário
+createPlaylistButton.addEventListener('click', () => {
+  const playlistName = document.getElementById('playlist-name').value;
+  if (playlistName) {
+    playlists[playlistName] = [];
+    renderPlaylists();
+    document.getElementById('playlist-name').value = '';
+  }
 });
 
-// Adiciona a música à lista de reprodução
-function addSongToPlaylist(title, artist, videoId) {
-    const song = { title, artist, videoId };
-    let playlist = JSON.parse(localStorage.getItem('playlist')) || [];
+addMusicButton.addEventListener('click', () => {
+  const musicName = document.getElementById('music-name').value;
+  const musicArtist = document.getElementById('music-artist').value;
+  const musicUrl = document.getElementById('music-url').value;
+  const playlistName = prompt('Para qual playlist você deseja adicionar a música?');
 
-    playlist.push(song);
-    localStorage.setItem('playlist', JSON.stringify(playlist));
-    renderPlaylist(playlist);
-}
+  if (playlistName in playlists && musicName && musicArtist && musicUrl) {
+    playlists[playlistName].push({ name: musicName, artist: musicArtist, url: musicUrl });
+    renderPlaylists();
+    document.getElementById('music-name').value = '';
+    document.getElementById('music-artist').value = '';
+    document.getElementById('music-url').value = '';
+  } else {
+    alert('Playlist não encontrada ou informações da música inválidas.');
+  }
+});
 
-// Carrega a playlist do localStorage
-function loadPlaylist() {
-    const playlist = JSON.parse(localStorage.getItem('playlist')) || [];
-    renderPlaylist(playlist);
-}
-
-// Renderiza a playlist na tela
-function renderPlaylist(playlist) {
-    songList.innerHTML = ''; // Limpa a lista atual
-    playlist.forEach(song => {
-        const li = document.createElement('li');
-        li.textContent = `${song.title} - ${song.artist} (ID: ${song.videoId})`;
-        songList.appendChild(li);
+function renderPlaylists() {
+  playlistsContainer.innerHTML = '';
+  for (const [playlistName, songs] of Object.entries(playlists)) {
+    const playlistDiv = document.createElement('div');
+    playlistDiv.classList.add('playlist');
+    playlistDiv.innerHTML = `<h3>${playlistName} <button onclick="deletePlaylist('${playlistName}')">Excluir</button></h3>`;
+    
+    const songList = document.createElement('div');
+    songs.forEach((song, index) => {
+      const songDiv = document.createElement('div');
+      songDiv.classList.add('music');
+      songDiv.innerHTML = `${song.name} - ${song.artist} <button onclick="deleteSong('${playlistName}', ${index})">Excluir</button>`;
+      songList.appendChild(songDiv);
     });
+    
+    playlistDiv.appendChild(songList);
+    playlistsContainer.appendChild(playlistDiv);
+  }
+}
+
+function deletePlaylist(playlistName) {
+  delete playlists[playlistName];
+  renderPlaylists();
+}
+
+function deleteSong(playlistName, songIndex) {
+  playlists[playlistName].splice(songIndex, 1);
+  renderPlaylists();
 }

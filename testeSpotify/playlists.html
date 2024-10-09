@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/playlist.css"> <!-- Link para o CSS -->
-    <title>Adicionar Música</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Playlists</title>
+  <link rel="stylesheet" href="./styles/playlist.css">
 </head>
 <body>
-    <header>
-        <h1>Adicionar Música à Playlist</h1>
-        <nav>
-            <a href="add_song.html">Adicionar Música</a>
-            <a href="playback.html">Reprodução</a>
-        </nav>
-    </header>
+  <div class="container">
+    <h1>Gerenciador de Playlists</h1>
 
-    <main>
-        <form id="add-song-form" class="add-song-form">
-            <input type="text" id="song-title" placeholder="Título da Música" required>
-            <input type="text" id="song-artist" placeholder="Artista" required>
-            <input type="text" id="song-id" placeholder="ID do Vídeo do YouTube" required>
-            <button type="submit">Adicionar Música</button>
-        </form>
-        
-        <h2>Músicas Adicionadas:</h2>
-        <ul id="song-list"></ul>
-    </main>
+    <div class="playlist-form">
+      <input type="text" id="playlist-name" placeholder="Nome da Playlist">
+      <button id="create-playlist">Criar Playlist</button>
+    </div>
 
-    <script src="scripts/add_song.js"></script> <!-- Link para o JavaScript -->
+    <div class="playlists" id="playlists"></div>
+
+    <div class="music-form">
+      <input type="text" id="music-name" placeholder="Nome da Música">
+      <input type="text" id="music-artist" placeholder="Artista">
+      <input type="text" id="music-url" placeholder="URL do YouTube">
+      <button id="add-music">Adicionar Música</button>
+    </div>
+  </div>
+
+  <script src="./scripts/add_song.js"></script>
 </body>
 </html>
