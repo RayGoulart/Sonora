@@ -56,10 +56,11 @@ input[type="text"] {
 main {
     padding: 20px;
     
+    
 }
 
 #containe_musica {
-    background-color: rgba(48, 0, 85, 0.13);
+    background-color: #181818;
     padding: 20px; 
     border-radius: 10px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -148,15 +149,15 @@ footer {
 .mostrar-tudo {
     font-size: 16px;
     font-weight: normal;
-    color: #1db954;
+    color: #af0caf;
     cursor: pointer;
-    border-bottom: 2px solid #1db954; /* Adiciona a linha */
+    border-bottom: 2px solid #af0caf; /* Adiciona a linha */
     padding-bottom: 2px; /* Dá um pequeno espaço entre o texto e a linha */
 }
 
 .mostrar-tudo:hover {
     text-decoration: none; /* Remove o sublinhado padrão */
-    border-bottom: 2px solid #1aa34a; /* Muda a cor da linha ao passar o mouse */
+    border-bottom: 2px solid #af0caf; /* Muda a cor da linha ao passar o mouse */
 }
 
 
@@ -194,14 +195,14 @@ input[type="text"] {
     padding: 10px 20px;
     border-radius: 20px;
     border: none;
-    background-color: #1db954;
-    color: white;
+    background-color: #af0caf;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .search-button:hover {
-    background-color: #1aa34a;
+    background-color: #541ab3;
 }
 
 
@@ -220,3 +221,33 @@ footer {
     background-color: #222;
     position: relative; /* Remove o "fixo" para permitir rolagem */
 }
+
+#containe_musica_sertaneja {
+    background-color: #181818;
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: 380px;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+
+
+#containe_musica_pagode {
+    background-color: #181818;
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: 380px;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+
+
+
+
+
