@@ -3,37 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="./styles/registro.css">
 </head>
 <body>
     <div class="container">
         <div id="logoSpotify">
-            <img src="./imagens/unnamed.png" alt="">
+            <img src="./imagens/unnamed.png" alt="Logo">
         </div>
         <h1>Se inscreva e comece a curtir</h1>
-        <input type="a" placeholder="Nome de usuário">
-        <input type="a" placeholder="Endereço de e-mail">
-        <input type="a" placeholder="Senha">
-        <button class="button">Avançar</button>
+        <input id="username" type="text" placeholder="Nome de usuário">
+        <input id="email" type="email" placeholder="Endereço de e-mail">
+        <input id="password" type="password" placeholder="Senha">
+        <button class="button" onclick="register()">Avançar</button>
         <p>ou</p>
-        <div class="alternative-login">
-            <a href="#" class="google">
-                <img src="./imagens/google_logo_icon_147282.webp" alt="Google">
-                Inscrever-se com o Google
-            </a>
-            <a href="#" class="facebook">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook">
-                Inscrever-se com o Facebook
-            </a>
-            <a href="#" class="apple">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
-                Criar conta com a Apple
-            </a>
-        </div>
+        <!-- Outros elementos omitidos -->
         <div class="login-link">
             <p>Já tem uma conta? <a href="indexlogin.html">Faça login aqui.</a></p>
         </div>
     </div>
+
+    <script>
+        function register() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (username && email && password) {
+                // Armazena os dados no localStorage
+                localStorage.setItem('username', username);
+                localStorage.setItem('email', email);
+                localStorage.setItem('password', password);
+
+                alert('Registro bem-sucedido! Agora você pode fazer login.');
+                // Redireciona para a página de login
+                window.location.href = 'indexlogin.html';
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        }
+    </script>
 </body>
 </html>
